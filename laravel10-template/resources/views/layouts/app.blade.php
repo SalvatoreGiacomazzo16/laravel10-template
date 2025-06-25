@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title', 'Laravel Template')</title>
+    <title>@yield('title', 'homepage')</title>
 
     {{-- Vite styles --}}
     @vite(['resources/scss/app.scss', 'resources/js/app.js'])
@@ -22,7 +22,7 @@
 
     {{-- Contenuto principale --}}
     <main class="container">
-        @yield('content')
+        @yield('main-content')
     </main>
 
     {{-- Footer (opzionale) --}}
@@ -34,5 +34,6 @@
 
     {{-- Sezione opzionale per JS extra --}}
     @yield('scripts')
+     @vite("resources/js/app.js")
 </body>
 </html>
